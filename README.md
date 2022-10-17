@@ -8,6 +8,9 @@ Welcome, this repository contains all the documents for O'Brien Group Project.
 <h2>Activity 2</h2>
 <p> Vlog 2: <a href='https://youtu.be/htX6bPb1xKI'>Click here</a> </p>
 
+<h2>Activity 3</h2>
+<p> Vlog 2: coming soon... </p>
+
 ## Documentation
 
 [Kanban Board](https://github.com/users/khavrks/projects/2)
