@@ -11,6 +11,12 @@ Welcome, this repository contains all the documents for O'Brien Group Project.
 <h2>Activity 3</h2>
 <p> Vlog #3: coming soon... </p>
 
+<h2>Activity 4</h2>
+<p> Vlog #4: coming soon... </p>
+
+<h2>Activity 5</h2>
+<p> Vlog #5: coming soon... </p>
+
 ## Documentation
 
 [Kanban Board](https://github.com/users/khavrks/projects/2)
