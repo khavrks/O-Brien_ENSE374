@@ -9,13 +9,10 @@ Welcome, this repository contains all the documents for O'Brien Group Project.
 <p> Vlog #2: <a href='https://youtu.be/htX6bPb1xKI'>Click here</a> </p>
 
 <h2>Activity 3</h2>
-<p> Vlog #3: coming soon... </p>
 
 <h2>Activity 4</h2>
-<p> Vlog #4: coming soon... </p>
 
 <h2>Activity 5</h2>
-<p> Vlog #5: coming soon... </p>
 
 ## Documentation
 
