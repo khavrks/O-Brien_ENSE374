@@ -24,4 +24,5 @@ Welcome, this repository contains all the documents for O'Brien Group Project.
 [Business Case](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Business_Case.pdf)
 
 <h2>License</h2>
+Creative Commons License
 This work is licensed under a <a href='https://creativecommons.org/licenses/by-sa/4.0'>Creative Commons Attribution-ShareAlike 4.0 International License</a>.
