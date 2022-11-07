@@ -40,6 +40,13 @@ INSTALLED_APPS = [
     # pip install
     'corsheaders',
     'rest_framework',
+    'django_filters',
+    'captcha',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.telegram',
+    'allauth.socialaccount.providers.vk',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,6 +54,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #extra 
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +74,7 @@ ROOT_URLCONF = 'django_movies.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,6 +119,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    # ...
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+    # ...
+]
+
+RECAPTCHA_PUBLIC_KEY = '6Ldd78wiAAAAAHf3Epqf1ZSoayLQCukcw-DoVQUN'
+RECAPTCHA_PRIVATE_KEY = '6Ldd78wiAAAAAF26KHJ0dIiJp459z-519wt8aZKX'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -121,6 +144,21 @@ USE_I18N = True
 
 USE_TZ = True
 
+STATIC_ROOT = 'static/'
+# STATIC_URL = '/home/ec2-user/static/'
+STATIC_URL = 'static/'
+
+
+SITE_ID = 1
+ACCOUNT_EMAIL_REQUIRED = True 
+ACCOUNT_EMAIL_VERIFICATION = False
+
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_SIGNUP_REDIRECT_URL = "/"
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

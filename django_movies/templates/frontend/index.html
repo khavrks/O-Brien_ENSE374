@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Page
+{% endblock %}
+
+
+{% csrf_token %} 
+
+{% block content %}
+    <div id="root">
+    </div>
+    <script src="{% static "frontend/main.js" %}"></script>
+    <script type="text/javascript"> CSRF_TOKEN = "{{ csrf_token }}"; </script>
+{% endblock %}

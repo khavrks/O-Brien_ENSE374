@@ -1,0 +1,9 @@
+{% extends 'main/layout.html' %} {% load static %} {% block title %} Register
+{%endblock %} {% csrf_token %} {% block content %}
+
+<form method="POST" action="{% url 'register' %}">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Register</button>
+</form>
+
+{% endblock %}

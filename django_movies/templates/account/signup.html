@@ -1,0 +1,85 @@
+{% extends "account/base.html" %} {% load i18n %} {% block head_title %}{% trans
+"Signup" %}{% endblock %} {% block content %}
+<h1>{% trans "Sign Up" %}</h1>
+
+<p>
+  {% blocktrans %}Already have an account? Then please
+  <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
+</p>
+
+{% if form.errors %} 
+  {% if form.errors.email.0  %} <div class="alert alert-primary" role="alert">display email error</div> {%endif %} 
+  {% if form.errors.username.0 %} <div class="alert alert-primary" role="alert">display username error</div> {%endif %} 
+  {% if form.errors.password1.0  %} <div class="alert alert-primary" role="alert">display password1 error</div> {% endif %}
+  {% if form.errors.password2.0 %} <div class="alert alert-primary" role="alert">display password2 error</div> {% endif %}
+  {% if form.errors.captcha.0  %} <div class="alert alert-danger" role="alert">display captcha error</div> {% endif %}
+{% for error in form.non_field_errors %}
+<div class="alert alert-error">
+  <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %} {% endif %}
+
+<form
+  class="signup"
+  id="signup_form"
+  method="post"
+  action="{% url 'account_signup' %}"
+>
+  {% csrf_token %} {% comment %} {{ form.as_p }} {% endcomment %}
+
+  <div class="mb-3">
+    <label for="emailid" class="form-label">Email address</label>
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      id="emailid"
+      aria-describedby="emailHelp"
+    />
+    <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="usernameid" class="form-label">UserName</label>
+    <input
+      type="text"
+      name="username"
+      placeholder="username"
+      class="form-control"
+      id="usernameid"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="password1" class="form-label">Password</label>
+    <input
+      type="password"
+      name="password1"
+      class="form-control"
+      id="password1"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="password2" name="password2" class="form-label"
+      >Confirm Password</label
+    >
+    <input
+      type="password"
+      name="password2"
+      class="form-control"
+      id="password2"
+    />
+  </div>
+  <div class="mb-3">{{ form.captcha }}</div>
+
+  {% if redirect_field_value %}
+  <input
+    type="hidden"
+    name="{{ redirect_field_name }}"
+    value="{{ redirect_field_value }}"
+  />
+  {% endif %}
+  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+</form>
+
+{% endblock %}
