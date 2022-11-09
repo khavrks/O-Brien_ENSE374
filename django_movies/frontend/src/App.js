@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { useHttp } from './hooks/http.hook';
 
-import { MainAvitoPage } from './routs/MainAvitoPage'
+import { Main } from './routs/Main';
+import { Pages } from './routs/Pages';
 
 function App() {
 
@@ -23,8 +24,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MainAvitoPage data={{is_auth, loading}} />}/>
-        
+        {/* <Route path='/' element={<MainAvitoPage data={{is_auth, loading}} />}/> */}
+        <Route path='/' element={<Main />} />
+        <Route path='pages/:page' element={<Pages />} /> 
       </Routes>
     </BrowserRouter>
   );

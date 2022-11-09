@@ -6,14 +6,16 @@ import { Container, Row, Col, Image, Card, Button, Pagination  } from "react-boo
 
 import { useHttp } from "../hooks/http.hook";
 
-export const Main = () => {
+
+export const Pages = () => {
 
     const { page } = useParams();
+    console.log(typeof(page));
     const {request, loading} = useHttp();
     const [the_movie_db_discovers, setThe_movie_db_discovers] = useState({});
 
     const get_the_movie_db_discovers = async () => {
-        const response = await request('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=1&year=2022&api_key=a0ef9fdb0123180a7db6b25210e40290', 'GET');
+        const response = await request(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=${page}&year=2022&api_key=a0ef9fdb0123180a7db6b25210e40290`, 'GET');
         setThe_movie_db_discovers(response);
         console.log(response);
     }
@@ -60,26 +62,65 @@ export const Main = () => {
             </Row>
             <Row>
                 <Col>
+                    {Number(page) > 1 ? 
+                    <Pagination>
+                        <Pagination.First href="/" />
+                        <Pagination.Prev href={`/pages/${Number(page) - 1}`} />
+                        {
+                            Number(page) < 4 ?
+                            <Pagination>
+                            <Pagination.Item
+                            active={Number(page) === 1}
+                            href={`/pages/1`}>{1}</Pagination.Item>
+                            <Pagination.Item
+                            active={Number(page) === 2}
+                            href={`/pages/2`}>{2}</Pagination.Item>
+                            <Pagination.Item
+                            active={Number(page) === 3}
+                            href={`/pages/3`}>{3}</Pagination.Item>
+                            <Pagination.Item
+                            active={Number(page) === 4}
+                            href={`/pages/4`}>{4}</Pagination.Item>
+                            <Pagination.Ellipsis />
+                            <Pagination.Item
+                            href="/pages/10/"
+                            >{10}</Pagination.Item>
+                            </Pagination>
+                            :
+                            <Pagination>
+                                <Pagination.Ellipsis />
+                                <Pagination.Item href={`/pages/${Number(page) - 2}`}>{Number(page) - 2}</Pagination.Item>
+                                <Pagination.Item href={`/pages/${Number(page) - 1}`}>{Number(page) - 1}</Pagination.Item>
+                                <Pagination.Item active href={`/pages/${Number(page)}`}>{Number(page)}</Pagination.Item>
+                                <Pagination.Item href={`/pages/${Number(page) + 1}`}>{Number(page) + 1}</Pagination.Item>
+                                <Pagination.Item href={`/pages/${Number(page) + 2}`}>{Number(page) + 2}</Pagination.Item>
+                                <Pagination.Ellipsis />
+                            </Pagination>
+                        }
+
+                    </Pagination>
+                    : 
                     <Pagination>
                         <Pagination.Prev />
                         <Pagination.Item
-                        href="pages/1/"
+                        href="/"
                         active
                         >{1}</Pagination.Item>
                         <Pagination.Item
-                        href="pages/2/"
+                        href="/pages/2/"
                         >{2}</Pagination.Item>
                         <Pagination.Item
-                        href="pages/3/"
+                        href="/pages/3/"
                         >{3}</Pagination.Item>
                         <Pagination.Item
-                        href="pages/4/"
+                        href="/pages/4/"
                         >{4}</Pagination.Item>
                         <Pagination.Ellipsis />
                         <Pagination.Item
-                        href="pages/10/"
+                        href="/pages/10/"
                         >{10}</Pagination.Item>
                     </Pagination>
+                    }
                 </Col>
             </Row>
 

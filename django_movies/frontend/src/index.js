@@ -4,12 +4,10 @@ import App from './App';
 
 import reportWebVitals from './reportWebVitals';
 import { MenuBar } from './components/MenuBar';
-import { NavBar } from './components/NavBar';
 // import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <NavBar /> */}
     <MenuBar />
     <App />
   </React.StrictMode>,

@@ -37,7 +37,7 @@ export const MenuBar = ({navbar}) => {
     }
 
     const user_func = async () => {
-        const data = await request('api/get_user/', 'GET');
+        const data = await request('/api/get_user/', 'GET');
         setUser(data);
         console.log(data);
     }
@@ -55,20 +55,19 @@ export const MenuBar = ({navbar}) => {
                 <Navbar.Brand href="/">
                     <Image
                     alt="logo"
-                    src="https://seeklogo.com/images/A/avito-logo-EAE1D3092C-seeklogo.com.png"
+                    src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
                     height={30}
                     className="d-inline-block align-top"
-                    />{' '}
-                    Parcer
+                    />
                 </Navbar.Brand>
                 <Nav className="me-auto"
                 style={{justifyContent: "space-between", width: "100%", alignContent: "center"}}
                 >
-                    <Nav.Link href="/">Главная</Nav.Link>
-                    <Nav.Link href="#features">Парсер</Nav.Link>
-                    <Nav.Link href="#pricing">Тарифы</Nav.Link>
+                    <Nav.Link href="/">Main</Nav.Link>
+                    <Nav.Link href="#features">Featured</Nav.Link>
+                    <Nav.Link href="#pricing">Popular Chats</Nav.Link>
                     <Nav.Link href="#pricing">FAQ</Nav.Link>
-                    <Nav.Link href="#pricing">Контакты</Nav.Link>
+                    {/* <Nav.Link href="#pricing">Контакты</Nav.Link> */}
                     {/* <Nav.Link href="#pricing"><i class="fa-solid fa-heart"></i></Nav.Link> */}
                 </Nav>
                 <Container 
@@ -78,19 +77,19 @@ export const MenuBar = ({navbar}) => {
                     <ButtonGroup aria-label="Basic example">
                         <Button variant="primary"
                         href="/accounts/logout/"
-                        >Выйти</Button>
+                        >LogOut</Button>
                         <Button variant="info"
                         href="/accounts/profile/"
-                        >{user.user.username}</Button>
+                        >{user.username}</Button>
                     </ButtonGroup>
                     :
                     <ButtonGroup aria-label="Basic example">
                         <Button variant="primary"
                         href="/accounts/login/"
-                        >Войти</Button>
+                        >Sign In</Button>
                         <Button variant="info"
                         href="/accounts/signup/"
-                        >Регистрация</Button>
+                        >Sign Up</Button>
                     </ButtonGroup>
                     }
                 </Container>

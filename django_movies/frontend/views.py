@@ -14,3 +14,8 @@ def index(request):
     context = {'segment': 'index', 'content_type': "application/x-javascript"}
     html_template = loader.get_template('frontend/index.html')
     return HttpResponse(html_template.render(context, request))
+
+def pages(request, page):
+    context = {'segment': page, 'content_type': "application/x-javascript"}
+    html_template = loader.get_template('frontend/index.html')
+    return HttpResponse(html_template.render(context, request))
