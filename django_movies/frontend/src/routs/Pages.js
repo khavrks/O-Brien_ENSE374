@@ -61,7 +61,9 @@ export const Pages = () => {
                 ) : <div></div>
             }
             </Row>
-            <Row>
+            <Row
+            style={{justifyContent: "center"}}
+            >
                 <Col>
                     {Number(page) > 1 ? 
                     <Pagination>

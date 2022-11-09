@@ -59,7 +59,9 @@ export const Main = () => {
                 ) : <div></div>
             }
             </Row>
-            <Row>
+            <Row
+            style={{justifyContent: "center"}}
+            >
                 <Col>
                     <Pagination>
                         <Pagination.Prev />
