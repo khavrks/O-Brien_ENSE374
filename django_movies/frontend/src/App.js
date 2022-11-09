@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useHttp } from './hooks/http.hook';
 
 import { Main } from './routs/Main';
+import { MoviePage } from './routs/MoviePage';
 import { Pages } from './routs/Pages';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         {/* <Route path='/' element={<MainAvitoPage data={{is_auth, loading}} />}/> */}
         <Route path='/' element={<Main />} />
         <Route path='pages/:page' element={<Pages />} /> 
+        <Route path='movies/:movie' element={<MoviePage />} />
       </Routes>
     </BrowserRouter>
   );

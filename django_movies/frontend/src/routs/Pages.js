@@ -10,7 +10,6 @@ import { useHttp } from "../hooks/http.hook";
 export const Pages = () => {
 
     const { page } = useParams();
-    console.log(typeof(page));
     const {request, loading} = useHttp();
     const [the_movie_db_discovers, setThe_movie_db_discovers] = useState({});
 
@@ -51,7 +50,9 @@ export const Pages = () => {
                                         fullIcon={<i className="fa fa-star"></i>}
                                         activeColor="#ffd700"
                                         />
-                                    <Button variant="primary">Visit Discussion</Button>
+                                    <Button variant="primary"
+                                    href={`/movies/${item.id}`}
+                                    >Visit Discussion</Button>
                                 </Card.Body>
                             </Card>
                         </Col>

@@ -19,3 +19,8 @@ def pages(request, page):
     context = {'segment': page, 'content_type': "application/x-javascript"}
     html_template = loader.get_template('frontend/index.html')
     return HttpResponse(html_template.render(context, request))
+
+def movies(request, movie):
+    context = {'segment': movie, 'content_type': "application/x-javascript"}
+    html_template = loader.get_template('frontend/index.html')
+    return HttpResponse(html_template.render(context, request))
