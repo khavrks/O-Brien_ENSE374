@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #pip channels
+    'channels',
 
     "frontend",
     "backend",
@@ -58,6 +60,8 @@ INSTALLED_APPS = [
     #extra 
     'django.contrib.sites',
 ]
+
+ASGI_APPLICATION = 'django_movies.asgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
