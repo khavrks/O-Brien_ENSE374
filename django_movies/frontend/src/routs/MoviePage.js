@@ -27,6 +27,21 @@ export const MoviePage = () => {
 
     const chatSocket = new WebSocket(ws_url);
 
+    useEffect(() => {
+        chatSocket.onopen = function(e) {
+            console.log("Connection established!");
+        };
+        
+        chatSocket.onmessage = function(e) {
+            console.log(e.data);
+        };
+
+        chatSocket.onclose = function(e) {
+            console.log("Connection closed.");
+        };
+    }, [])
+    
+
     return(
         <Container>
             {loading ? <div>loading...</div> : <div></div>}

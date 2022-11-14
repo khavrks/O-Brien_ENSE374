@@ -61,7 +61,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 ]
 
-ASGI_APPLICATION = 'django_movies.asgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -91,6 +90,8 @@ TEMPLATES = [
     },
 ]
 
+
+ASGI_APPLICATION = 'django_movies.asgi.application'
 WSGI_APPLICATION = 'django_movies.wsgi.application'
 
 
