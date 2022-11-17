@@ -2,7 +2,7 @@ import React, {useState, useEffect, useCallback} from "react";
 import { useParams } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 
-import { Container, Row, Col, Image, Card, Button  } from "react-bootstrap";
+import { Container, Row, Col, Image, Alert  } from "react-bootstrap";
 
 import { useHttp } from "../hooks/http.hook";
 
@@ -47,7 +47,9 @@ export const MoviePage = () => {
             {loading ? <div>loading...</div> : <div></div>}
             <Row>
                 <Col>
-                    <Image src={`https://image.tmdb.org/t/p/w500${the_movie_db_movie.poster_path}`} />
+                    <Image src={`https://image.tmdb.org/t/p/w500${the_movie_db_movie.poster_path}`} 
+                    onClick={() => window.location.replace(the_movie_db_movie.homepage)}
+                    />
                 </Col>
                 <Col>
                     <h1>{the_movie_db_movie.title}</h1>
@@ -63,6 +65,15 @@ export const MoviePage = () => {
                         fullIcon={<i className="fa fa-star"></i>}
                         activeColor="#ffd700"
                     />
+                    <p>
+                        {the_movie_db_movie.genres?.map((item, index) => {
+                            return (
+                                <Alert variant="primary">
+                                    {item.name}
+                                </Alert>
+                            )
+                        })}
+                    </p>
                 </Col>
             </Row>
         </Container>
