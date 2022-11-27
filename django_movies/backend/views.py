@@ -30,3 +30,13 @@ class GetUser(APIView):
                 return Response(serializeruser.data, status=status.HTTP_200_OK)
             else:
                 return Response(status=status.HTTP_401_UNAUTHORIZED)
+
+
+class GetMovieMessages(APIView):
+
+
+    def get(self, request):
+        movie_id = request.GET.get('movie_id')
+        movie_chats = MovieChats.objects.filter(movie_id=movie_id)
+        serializer = MovieChatsSerializer(movie_chats, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
