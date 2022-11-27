@@ -23,7 +23,7 @@ export const MoviePage = () => {
         get_the_movie_db_movie();
     }, [])
 
-    let ws_url = `ws://${window.location.host}/ws/socket-server/`;
+    let ws_url = `ws://${window.location.host}/ws/${movie}/`;
 
     const chatSocket = new WebSocket(ws_url);
 
