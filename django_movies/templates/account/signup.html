@@ -3,6 +3,14 @@
 {% extends "account/base.html" %} {% load i18n %} {% block head_title %}{% trans
 "Signup" %}{% endblock %} {% block content %}
 
+{% if form.errors %}
+  {% for field in form %}
+    {% for error in field.errors %}
+      {{ error }}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
 {% if form.errors %} 
   {% if form.errors.email.0  %} <div class="alert alert-primary" role="alert">Please Enter Email</div> {%endif %} 
   {% if form.errors.username.0 %} <div class="alert alert-primary" role="alert">Please Enter Username</div> {%endif %} 
