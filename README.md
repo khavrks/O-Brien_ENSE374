@@ -5,8 +5,9 @@ Welcome, this repository contains all the documents for O'Brien Group Project.
 Our MovieDiscuss website is made for all people who love to watch movies but are always wanting to discuss, review, or just chat about what they just watched!
 
 ## Installation Instructions : [Installation]()
+Below contains all the downloadable files for the MovieDiscuss project, the folder also includes installation instructions which can be easily accessed through the title above.
 
-#### Project Files : [MovieDiscuss](https://github.com/khavrks/O-Brien_ENSE374/tree/main/django_movies)
+#### Project Files : [MovieDiscuss](https://github.com/khavrks/O-Brien_ENSE374/tree/main/MovieDiscussInstallation)
 
 <h2>Activity 1</h2>
 <p> Vlog #1: <a href='https://www.youtube.com/watch?v=U2Y-dal7ZFc'>Click here</a></p>
