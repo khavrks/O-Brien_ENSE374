@@ -1,0 +1,20 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.css' %}" type='text/css'>
+    <link rel="stylesheet" href="{% static 'frontend/css/fontawesome.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'frontend/css/fontawsemeall.css' %}" type='text/css'> {% endcomment %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'frontend/css/main.css' %}"> {% endcomment %}
+    <script src="{% static 'frontend/js/jquery.min.js' %}"></script>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

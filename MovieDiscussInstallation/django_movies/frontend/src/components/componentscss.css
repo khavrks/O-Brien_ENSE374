@@ -1,0 +1,8 @@
+.line {
+	content: "";
+	left: 0;
+    position: relative;
+    margin-left: 10;
+    margin-right: 10;
+	border-right: solid 1px #5f7190;
+}

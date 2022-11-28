@@ -1,0 +1,101 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+{% extends "account/base.html" %} {% load i18n %} {% block head_title %}{% trans
+"Signup" %}{% endblock %} {% block content %}
+
+{% if form.errors %}
+  {% for field in form %}
+    {% for error in field.errors %}
+      {{ error }}
+    {% endfor %}
+  {% endfor %}
+  {% for error in form.non_field_errors %}
+    <div class = "alert alert-error">
+      <strong>{{ error|escape }}</strong>
+    </div> 
+  {% endfor %}
+{% endif %}
+
+{% if form.errors %} 
+  {% if form.errors.email.0  %} <div class="alert alert-primary" role="alert">Please Enter Email</div> {%endif %} 
+  {% if form.errors.username.0 %} <div class="alert alert-primary" role="alert">Please Enter Username</div> {%endif %} 
+  {% comment %}{% if form.errors.password1.0  %} <div class="alert alert-primary" role="alert">Invalid Password: 
+    Need atleast 1 capital letter, 1 number, and 1 special character</div> {% endif %}{% endcomment %}
+  {% if form.errors.password2.0 %} <div class="alert alert-primary" role="alert">Passwords do not match</div> {% endif %}
+  {% if form.errors.captcha.0  %} <div class="alert alert-danger" role="alert">display captcha error</div> {% endif %}
+{% for error in form.non_field_errors %}
+<div class="alert alert-error">
+  <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %} {% endif %}
+
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+            <h2 class="text-uppercase text-center mb-5">{% trans "Sign Up" %}</h2>
+
+            <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+              {% csrf_token %} {% comment %} {{ form.as_p }} {% endcomment %}
+
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+              <div class="form-outline mb-4">
+                <input type="email" name="email" id="emailid" class="form-control form-control-lg" placeholder="abc@hotmail.com" aria-describedby="emailHelp" required/>
+                <label class="form-label" for="emailid">Email Address</label>
+              </div>
+              
+
+              <div class="form-outline mb-4">
+                <input type="text" name="username" id="usernameid" placeholder="john123" class="form-control form-control-lg" required/>
+                <label class="form-label" for="usernameid">Username</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="password" name="password1" id="password1" class="form-control form-control-lg" required/>
+                <label class="form-label" for="password1">Password</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="password" name="password2" id="password2" class="form-control form-control-lg" required/>
+                <label class="form-label" for="password2" name="password2">Repeat your password</label>
+              </div>
+
+              <div class="form-check d-flex justify-content-center mb-5">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" required />
+                <label class="form-check-label" for="form2Example3g">
+                  I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                </label>
+              </div>
+
+              {% if redirect_field_value %}
+              <input
+                type="hidden"
+                name="{{ redirect_field_name }}"
+                value="{{ redirect_field_value }}"
+              />
+              {% endif %}
+
+              <div class="d-flex justify-content-center">
+                <button type="submit"
+                  class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">{% trans "Sign Up" %} &raquo;</button>
+              </div>
+
+              <p class="text-center text-muted mt-5 mb-0">
+                {% blocktrans %}Already have an account? Then please
+                <a href="{{ login_url }}" class="fw-bold text-body">sign in</a>.{% endblocktrans %}
+              </p>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
