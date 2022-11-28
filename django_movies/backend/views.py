@@ -33,10 +33,25 @@ class GetUser(APIView):
 
 
 class GetMovieMessages(APIView):
-
-
-    def get(self, request):
-        movie_id = request.GET.get('movie_id')
-        movie_chats = MovieChats.objects.filter(movie_id=movie_id)
+    def get(self, request, movie):
+        print(movie)
+        movie_chats = MovieChats.objects.filter(movie_id=movie).order_by('-timestamp')
         serializer = MovieChatsSerializer(movie_chats, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class SendMessage(APIView):
+    def post(self, request, movie):
+        user = request.user
+        if user.is_authenticated:
+            user = User.objects.get(username=user.username)
+            message = request.data['message']
+            print("message", message)
+            print("movie", movie)
+            print("user", user)
+            movie_chat = MovieChats.objects.create(
+                user=user, movie_id=movie, message=message)
+            movie_chat.save()
+            return Response(status=status.HTTP_200_OK)
+        else:
+            return Response(status=status.HTTP_401_UNAUTHORIZED)
