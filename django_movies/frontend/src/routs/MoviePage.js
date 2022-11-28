@@ -33,11 +33,11 @@ export const MoviePage = (is_auth) => {
     }
 
     const send_message = async () => {
-        const response = await request(`http://localhost:8000/api/send_message/${movie}`, 'POST', {message: test}, {"X-CSRFToken":CSRF_TOKEN, "Content-Type": "application/json", 'Access-Control-Allow-Origin': '*'});
+        const response = await request(`http://${window.location.host}/api/send_message/${movie}`, 'POST', {message: test}, {"X-CSRFToken":CSRF_TOKEN, "Content-Type": "application/json", 'Access-Control-Allow-Origin': '*'});
     }
 
     const get_messages = async () => {
-        const response = await request(`http://localhost:8000/api/get_movie_messages/${movie}`, 'GET');
+        const response = await request(`http://${window.location.host}/api/get_movie_messages/${movie}`, 'GET');
         setmovie_messages(response);
     }
 
@@ -53,7 +53,7 @@ export const MoviePage = (is_auth) => {
         user_funcct();
     }, [])
 
-    // let ws_url = `ws://${window.location.hostname}:8000/ws/${movie}/`;
+    // let ws_url = `ws://${window.location.host}:8000/ws/${movie}/`;
 
     // const chatSocket = new WebSocket(ws_url);
 
