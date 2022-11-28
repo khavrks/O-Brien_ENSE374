@@ -9,18 +9,19 @@
 <h2>Running the website: </h2>
 
 1. cd to django_movies  
-   ```
-    cd django_movies
-   ```
+  ```
+  cd django_movies
+  ```
+   
 2. Install the "requirements.txt" through Python
-   ```
-   pip install -r re
-   ```
+  ```
+  pip install -r re
+  ```
 
 3. Create a virtual environment
-   ```
-   python -m venv venv
-   ```
+  ```
+  python -m venv venv
+  ```
    
 4. Enter the virtual environment 
   ```
