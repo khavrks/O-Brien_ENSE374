@@ -6,7 +6,7 @@
 2. Latest version of Python
 
 
-##Running the website: 
+<h2>Running the website: </h2>
 
 1. cd to django_movies  
    ```
