@@ -160,8 +160,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = '/var/www/html/static/'
 STATIC_ROOT = '/var/www/html/static/'
+STATIC_URL = '/var/www/html/static/'
 # STATIC_URL = 'static/'
 
 
