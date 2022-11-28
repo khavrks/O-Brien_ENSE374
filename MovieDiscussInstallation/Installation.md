@@ -3,7 +3,7 @@
 1. django_movies folder from https://github.com/khavrks/O-Brien_ENSE374/tree/main/MovieDiscussInstallation 
 
 
-2. Latest version of Python
+2. Python 3.10.0 and up. Preferred version Python 3.10.8
 
 
 <h2>Running the website: </h2>
