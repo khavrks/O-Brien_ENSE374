@@ -63,6 +63,8 @@ INSTALLED_APPS = [
 ]
 
 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -159,7 +161,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_ROOT = '/var/www/static/'
-STATIC_URL = 'static/'
+STATIC_URL = '/var/www/static/'
 # STATIC_URL = 'static/'
 
 
