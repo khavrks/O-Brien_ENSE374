@@ -9,12 +9,18 @@
       {{ error }}
     {% endfor %}
   {% endfor %}
+  {% for error in form.non_field_errors %}
+    <div class = "alert alert-error">
+      <strong>{{ error|escape }}</strong>
+    </div> 
+  {% endfor %}
 {% endif %}
 
 {% if form.errors %} 
   {% if form.errors.email.0  %} <div class="alert alert-primary" role="alert">Please Enter Email</div> {%endif %} 
   {% if form.errors.username.0 %} <div class="alert alert-primary" role="alert">Please Enter Username</div> {%endif %} 
-  {% if form.errors.password1.0  %} <div class="alert alert-primary" role="alert">Please Enter Password</div> {% endif %}
+  {% comment %}{% if form.errors.password1.0  %} <div class="alert alert-primary" role="alert">Invalid Password: 
+    Need atleast 1 capital letter, 1 number, and 1 special character</div> {% endif %}{% endcomment %}
   {% if form.errors.password2.0 %} <div class="alert alert-primary" role="alert">Passwords do not match</div> {% endif %}
   {% if form.errors.captcha.0  %} <div class="alert alert-danger" role="alert">display captcha error</div> {% endif %}
 {% for error in form.non_field_errors %}
@@ -38,23 +44,23 @@
                 We'll never share your email with anyone else.
               </div>
               <div class="form-outline mb-4">
-                <input type="email" name="email" id="emailid" class="form-control form-control-lg" placeholder="abc@hotmail.com" aria-describedby="emailHelp"/>
+                <input type="email" name="email" id="emailid" class="form-control form-control-lg" placeholder="abc@hotmail.com" aria-describedby="emailHelp" required/>
                 <label class="form-label" for="emailid">Email Address</label>
               </div>
               
 
               <div class="form-outline mb-4">
-                <input type="text" name="username" id="usernameid" placeholder="john123" class="form-control form-control-lg" />
+                <input type="text" name="username" id="usernameid" placeholder="john123" class="form-control form-control-lg" required/>
                 <label class="form-label" for="usernameid">Username</label>
               </div>
 
               <div class="form-outline mb-4">
-                <input type="password" name="password1" id="password1" class="form-control form-control-lg" />
+                <input type="password" name="password1" id="password1" class="form-control form-control-lg" required/>
                 <label class="form-label" for="password1">Password</label>
               </div>
 
               <div class="form-outline mb-4">
-                <input type="password" name="password2" id="password2" class="form-control form-control-lg" />
+                <input type="password" name="password2" id="password2" class="form-control form-control-lg" required/>
                 <label class="form-label" for="password2" name="password2">Repeat your password</label>
               </div>
 
