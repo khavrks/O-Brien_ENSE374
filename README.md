@@ -4,7 +4,7 @@ Welcome, this repository contains all the documents for O'Brien Group Project.
 
 Our MovieDiscuss website is made for all people who love to watch movies but are always wanting to discuss, review, or just chat about what they just watched!
 
-## Installation Instructions : [Installation]()
+## Installation Instructions : [Installation](https://github.com/khavrks/O-Brien_ENSE374/blob/main/MovieDiscussInstallation/Installation.md)
 Below contains all the downloadable files for the MovieDiscuss project, the folder also includes installation instructions which can be easily accessed through the title above.
 
 #### Project Files : [MovieDiscuss](https://github.com/khavrks/O-Brien_ENSE374/tree/main/MovieDiscussInstallation)
