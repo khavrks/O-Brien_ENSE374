@@ -1,4 +1,4 @@
-##Pre-Install: 
+<h2>Pre-Install:</h2>
 
 1. django_movies folder from https://github.com/khavrks/O-Brien_ENSE374/tree/main/MovieDiscussInstallation 
 
