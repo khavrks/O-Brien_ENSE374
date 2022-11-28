@@ -15,7 +15,6 @@ function App() {
   const is_auth_func = async () => {
     const data = await request('/api/is_authenticated/', 'GET');
     setIs_auth(data);
-    console.log(data);
   }
 
   useEffect(() => {
@@ -28,7 +27,7 @@ function App() {
         {/* <Route path='/' element={<MainAvitoPage data={{is_auth, loading}} />}/> */}
         <Route path='/' element={<Main />} />
         <Route path='pages/:page' element={<Pages />} /> 
-        <Route path='movies/:movie' element={<MoviePage />} />
+        <Route path='movies/:movie' element={<MoviePage is_auth={is_auth}/>} />
       </Routes>
     </BrowserRouter>
   );

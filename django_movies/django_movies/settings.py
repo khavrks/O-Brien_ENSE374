@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-rpppn@*17u=qv)p%=%6+0o=&!k6*uc1co3p!q6mvsm4^vi+06n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.207.152.60']
+
+CORS_ALLOWED_ORIGINS = ['http://34.207.152.60']
+CSRF_TRUSTED_ORIGINS = ['http://34.207.152.60']
 
 
 # Application definition
@@ -33,7 +36,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #pip channels
     # 'channels',
-    "daphne",
+    # "daphne",
 
     "frontend",
     "backend",
@@ -61,6 +64,8 @@ INSTALLED_APPS = [
     #extra 
     'django.contrib.sites',
 ]
+
+
 
 
 MIDDLEWARE = [
@@ -92,15 +97,15 @@ TEMPLATES = [
 ]
 
 
-ASGI_APPLICATION = 'django_movies.asgi.application'
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
-    },
-}
+# ASGI_APPLICATION = 'django_movies.asgi.application'
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "channels_redis.core.RedisChannelLayer",
+#         "CONFIG": {
+#             "hosts": [("127.0.0.1", 6379)],
+#         },
+#     },
+# }
 WSGI_APPLICATION = 'django_movies.wsgi.application'
 
 
@@ -159,8 +164,8 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_ROOT = 'static/'
-# STATIC_URL = '/home/ec2-user/static/'
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+# STATIC_URL = 'static/'
 
 
 SITE_ID = 1

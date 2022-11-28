@@ -39,7 +39,6 @@ export const MenuBar = ({navbar}) => {
     const user_func = async () => {
         const data = await request('/api/get_user/', 'GET');
         setUser(data);
-        console.log(data);
     }
 
     useEffect(() => {   
