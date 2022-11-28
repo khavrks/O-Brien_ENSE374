@@ -158,9 +158,9 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_ROOT = 'static/'
-# STATIC_URL = '/home/ec2-user/static/'
+STATIC_ROOT = '/var/www/static/'
 STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 
 
 SITE_ID = 1
