@@ -19,8 +19,10 @@ Below contains all the downloadable files for the MovieDiscuss project, the fold
 <p> Vlog #3: <a href='https://youtu.be/8vpQnDCO9f0'>Click here</a> </p>
 
 <h2>Activity 4</h2>
+This was individual work. 
 
 <h2>Activity 5</h2>
+<p> Vlog #4: coming soon... </p>
 
 ## Documentation
 
