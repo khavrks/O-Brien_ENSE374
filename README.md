@@ -32,8 +32,6 @@ This was individual work.
 
 [RACI Chart]()
 
-[Project Charter](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Project_Charter.pdf)
-
 [Business Case](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Business_Case.pdf)
 
 <h2>License</h2>
