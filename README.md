@@ -4,9 +4,10 @@ Welcome, this repository contains all the documents for O'Brien Group Project.
 
 Our MovieDiscuss website is made for all people who love to watch movies but are always wanting to discuss, review, or just chat about what they just watched!
 
-## Installation Instructions : [Installation]()
+## Installation Instructions: [Installation](https://github.com/khavrks/O-Brien_ENSE374/blob/main/MovieDiscussInstallation/Installation.md)
+Below contains all the downloadable files for the MovieDiscuss project, the folder also includes installation instructions which can be easily accessed through the title above.
 
-#### Project Files : [MovieDiscuss](https://github.com/khavrks/O-Brien_ENSE374/tree/main/django_movies)
+#### Project Files : [MovieDiscuss](https://github.com/khavrks/O-Brien_ENSE374/tree/main/MovieDiscussInstallation)
 
 <h2>Activity 1</h2>
 <p> Vlog #1: <a href='https://www.youtube.com/watch?v=U2Y-dal7ZFc'>Click here</a></p>
@@ -18,8 +19,10 @@ Our MovieDiscuss website is made for all people who love to watch movies but are
 <p> Vlog #3: <a href='https://youtu.be/8vpQnDCO9f0'>Click here</a> </p>
 
 <h2>Activity 4</h2>
+This was individual work. 
 
 <h2>Activity 5</h2>
+<p> Vlog #4: coming soon... </p>
 
 ## Documentation
 
@@ -27,9 +30,7 @@ Our MovieDiscuss website is made for all people who love to watch movies but are
 
 [Project Charter](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Project_Charter.pdf)
 
-[RACI Chart]()
-
-[Project Charter](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Project_Charter.pdf)
+[RACI Chart](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_RACI_Chart.pdf)
 
 [Business Case](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Business_Case.pdf)
 
