@@ -22,7 +22,7 @@ Below contains all the downloadable files for the MovieDiscuss project, the fold
 This was individual work. 
 
 <h2>Activity 5</h2>
-<p> Vlog #4: <a href='https://youtu.be/tWxk-qdTSFs'>Click here</a> </p>
+<p> Vlog #4/Commercial: <a href='https://youtu.be/tWxk-qdTSFs'>Click here</a> </p>
 
 ## Documentation
 
