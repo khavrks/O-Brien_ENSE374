@@ -30,7 +30,7 @@ This was individual work.
 
 [Project Charter](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Project_Charter.pdf)
 
-[RACI Chart]()
+[RACI Chart](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_RACI_Chart.pdf)
 
 [Business Case](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Business_Case.pdf)
 
