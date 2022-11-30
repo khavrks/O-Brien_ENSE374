@@ -1,4 +1,4 @@
-# O-Brien_ENSE374
+# O'Brien
 
 Welcome, this repository contains all the documents for O'Brien Group Project.
 
