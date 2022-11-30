@@ -34,7 +34,7 @@ This was individual work.
 
 [Business Case](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_Business_Case.pdf)
 
-[Final Project Charter](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_FinalProjectReport.pdf)
+[Final Project Charter](https://github.com/khavrks/O-Brien_ENSE374/blob/main/documentation/pdf/OBrien_FinalProjectCharter.pdf)
 
 [Final Project Report](https://github.com/khavrks/O-Brien_ENSE374/blob/main/Final%20Report/OBrien_FinalProjectReport.pdf)
 
